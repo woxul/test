@@ -53,11 +53,12 @@ void uartSend(char data) {
 void loop() {
   char txData = 'a';
 
-  // 비트뱅 송신
-  uartSend(txData);
-
   // 하드웨어 UART로도 송신 (RX 파형 생성)
   Serial.write(txData);
 
+  // 비트뱅 송신
+  uartSend(txData);
+
   delay(500);
 }
+
